@@ -8,7 +8,7 @@ for i in range(1, 10):
         char_count += len(combination)
 
         if char_count <= char_limit:
-            print(combination, end=", ")
+            print(combination)
         else:
             break
     else:
