@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-output = ""
-for i in range(10):
+char_limit = 179
+char_count = 0
+
+for i in range(1, 10):
     for j in range(i + 1, 10):
-        output += "{:02d}, {:02d}".format(i, j)
-        output += "\n" if i == 8 and j == 9 else ", "
-output = output[:179]  
-print(output)
+        combination = "{:02d}, {:02d}".format(i, j)
+        char_count += len(combination)
 
-
-
-
-
-
-
+        if char_count <= char_limit:
+            print(combination, end=", ")
+        else:
+            break
+    else:
+        continue
+    break
+print()
